@@ -24,7 +24,7 @@ $products = [
     [
         "id" => 1,
         "name" => "iPhone 15 Promax",
-        "price" => 1500,
+        "price" => 1400,
         "thumbnail" => "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/1.png",
         "description" => "The iPhone X is a flagship smartphone featuring a bezel-less OLED display, facial recognition technology (Face ID), and impressive performance. It represents a milestone in iPhone design and innovation."
     ],
