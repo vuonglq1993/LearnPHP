@@ -1,7 +1,10 @@
-<?php 
+<?php
   require_once("./function/db.php");
-  $sql = "select * from products";
-  $products = select($sql);
+    // 1 Get Parameter
+        $id = $_GET["id"];
+    // 2. connect db
+    $sql = "select * from products where category_id=$id";
+    $products = select($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +13,7 @@
   <?php include_once("html/nav.php");?>
   <main>
     <div class="container">
+        <h1>Category</h1>
         <div class="row">
           <?php foreach($products as $item):?>
             <div class="col-3 mb-3 mt-3">
@@ -26,6 +30,6 @@
           <?php endforeach;?>  
         </div>
     </div>
-  </main>
+  </main>  
 </body>
 </html>
