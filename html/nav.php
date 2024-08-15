@@ -24,7 +24,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <?php endforeach;?>
       </ul>
       <form action="/search.php" method="get" class="d-flex" role="search">
-        <input name="query" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="name">
+        <input name="name" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit" name ="btn">Search</button>
       </form>
       <a href="/cart.php" class="btn btn-outline-dark ms-1">
