@@ -68,7 +68,7 @@ $grandtotal = array_sum(array_column($cartItems, 'total'));
                         <label for="exampleFormControlInput1" class="form-label">CardNumber</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1"
                             placeholder="1234 **** **** ****">
-                    </div>
+                    </div>  
                 </div>
                 <div class="form-check box">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
@@ -90,7 +90,6 @@ $grandtotal = array_sum(array_column($cartItems, 'total'));
             <strong>Total: <?php echo htmlspecialchars('$' . $grandtotal); ?></strong>
         </div>
             </div>
-        
         </div>
     </div>
     </div>

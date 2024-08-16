@@ -14,17 +14,21 @@
       margin-bottom: 17rem;
     }
     .overall{
-     display: flex;
+     display: block;
     }
     .left-part{
+      display: inline-block;
       margin-left:  clamp(1rem, 20vw,100rem);
+      max-width: clamp(20rem, 30rem,100rem);
     }
     .right-part{
       display: inline-block;
-      align-items: center;
+      margin-right:clamp(1rem, 20vw,100rem);
+      max-width: clamp(20rem, 30rem,100rem);
     }
     .borderbbbb{
-      margin-bottom: 0.5rem;
+      float: top;
+      padding-bottom: 30rem;
       border: 1px solid black;
       padding: 10px;
       margin-bottom: 1rem;
