@@ -66,7 +66,7 @@ foreach ($cart as $key => $item) {
                                 echo htmlspecialchars('$' . $grandtotal);
                                 ?>
                             </p>
-                            <a href="#" class="btn btn-primary">Checkout</a>
+                            <a href="/checkout.php" class="btn btn-primary">Checkout</a>
                             <a href="clearcart.php" class="btn btn-danger">Clear Cart</a>
                         </div>
                     </div>

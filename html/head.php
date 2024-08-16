@@ -27,6 +27,7 @@
       max-width: clamp(20rem, 30rem,100rem);
     }
     .borderbbbb{
+      margin-top: 5rem;
       float: top;
       padding-bottom: 30rem;
       border: 1px solid black;
@@ -34,6 +35,16 @@
       margin-bottom: 1rem;
       border-radius: 5px;
       background-color: white;
+    }
+    .formborder{
+      border: none;
+      border-radius: 50px;
+      background-color: white;
+      padding: 1rem;
+
+    }
+    .marginbot{
+      margin-bottom: 8rem;
     }
   </style>
 </head>
