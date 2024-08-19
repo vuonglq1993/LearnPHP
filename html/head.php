@@ -7,6 +7,45 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
+        /* Extra small devices (portrait phones, less than 576px) */
+        @media (max-width: 575.98px) {
+        .custom-class {
+            /* Add your custom styles here */
+            background-color: red;
+        }
+    }
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .custom-class {
+            /* Add your custom styles here */
+            background-color: blue;
+        }
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .custom-class {
+            /* Add your custom styles here */
+            background-color: green;
+        }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .custom-class {
+            /* Add your custom styles here */
+            background-color: yellow;
+        }
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+        .custom-class {
+            /* Add your custom styles here */
+            background-color: purple;
+        }
+    }
     body {
       background: linear-gradient(45deg, #e1e5f2 25%, #ffffff 45%, #e1e5f2 65%, #ffffff 85%);
     }
