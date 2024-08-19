@@ -1,4 +1,5 @@
 <?php 
+
 function connect()
 {
     $config = file_get_contents("./app_setting.json");

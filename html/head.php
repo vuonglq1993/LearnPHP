@@ -66,7 +66,7 @@
       max-width: clamp(20rem, 30rem,100rem);
     }
     .borderbbbb{
-      margin-top: 5rem;
+      margin-top: 5.6rem;
       float: top;
       padding-bottom: 30rem;
       border: 1px solid black;

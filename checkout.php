@@ -96,7 +96,7 @@ $grandtotal = array_sum(array_column($cartItems, 'total'));
                         <?php foreach ($cartItems as $item): ?>
                             <div class="row border-bottom mt-3 mb-3">
                                 <div class="col-8 pb-3">
-                                    <strong><?php echo htmlspecialchars($item['quantity']) ?>
+                                    <strong><?php echo htmlspecialchars($item['quantity']) ?> x
                                         <?php echo htmlspecialchars($item['name']) ?></strong><br>
                                     <?php echo htmlspecialchars($item['details']) ?>
 
