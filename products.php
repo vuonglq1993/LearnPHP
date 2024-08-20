@@ -18,7 +18,7 @@ if ($products == null) {
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <img src="<?php echo $products["thumbnail"]; ?>" />
+                    <img src="<?php echo $products["thumbnail"]; ?>" style="width:50%"; />
                 </div>
                 <div class="col-8">
                     <h1><?php echo $products["name"]; ?></h1>

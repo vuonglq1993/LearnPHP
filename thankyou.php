@@ -22,7 +22,7 @@ foreach ($cart as $key => $item) {
     }
 }
 $grandtotal = array_sum(array_column($cartItems, 'total'));
-
+clearCart();
 ?>
 
 <!DOCTYPE html>

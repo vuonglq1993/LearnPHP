@@ -19,7 +19,8 @@ function getCartItems(){
                     "thumbnail"=> $item["thumbnail"],
                     "price"=> $item["price"],
                     "in_stock"=> $item["qty"] > $cart[$item["id"]]?true:false,
-                    "buy_qty"=>$cart[$item["id"]]
+                    "buy_qty"=>$cart[$item["id"]],
+                    "details" => $item["description"]
             ];
         }
     }
