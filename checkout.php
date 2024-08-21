@@ -45,7 +45,7 @@ $grand_total = 0;
                         <h1>Payment Method</h1>
                         <div class="formborder">
                             <div class="form-check box">
-                                <input class="form-check-input" name="payment_method" type="radio" name="flexRadioDefault"
+                                <input class="form-check-input"  name="payment_method" type="radio" name="flexRadioDefault"
                                     id="flexRadioDefault1">
                                 <label class="form-check-label" for="flexRadioDefault1">
                                     COD
@@ -55,7 +55,7 @@ $grand_total = 0;
                         <div class="formborder  mt-3">
 
                             <div class="form-check box">
-                                <input class="form-check-input" name="payment_method" type="radio" name="flexRadioDefault"
+                                <input class="form-check-input" value="PAYPAL" name="payment_method" type="radio" name="flexRadioDefault"
                                     id="flexRadioDefault2" checked>
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     PayPal

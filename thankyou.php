@@ -2,27 +2,10 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-$cart = isset($_SESSION["cart"]) ? $_SESSION["cart"] : [];
-require_once("./function/db.php");
-$sql = "SELECT * FROM products";
-$products = select($sql);
-$cartItems = [];
-foreach ($cart as $key => $item) {
-    if (isset($products[$key])) {
-        $product = $products[$key];
-        $cartItems[] = [
-            'details' => $product['description'],
-            'thumbnail' => $product['thumbnail'],
-            'product_id' => $product['id'],
-            'name' => $product['name'],
-            'price' => $product['price'],
-            'quantity' => $item,
-            'total' => $item * $product['price'],
-        ];
-    }
-}
-$grandtotal = array_sum(array_column($cartItems, 'total'));
-clearCart();
+require_once("./function/cart.php");
+$items = getCartItems();
+$grand_total = 0;
+clearcart();
 ?>
 
 <!DOCTYPE html>
@@ -50,29 +33,30 @@ clearCart();
                 <p class="text-center">Trân trọng,</p>
 
                 <div class="row borderbbbb">
-                    <h4 class="text-center">Thông tin đơn hàng</h4>
+                        <h4>Thông tin đơn hàng</h4>
 
-                    <div class="col">
-                        <?php foreach ($cartItems as $item): ?>
-                            <div class="row border-bottom mt-3 mb-3">
-                                <div class="col-8 pb-3">
-                                    <strong><?php echo htmlspecialchars($item['quantity']) ?> x
-                                        <?php echo htmlspecialchars($item['name']) ?></strong><br>
-                                    <?php echo htmlspecialchars($item['details']) ?>
+                        <div class="col">
+                            <?php foreach ($items as $item): ?>
+                                <?php $grand_total += $item["buy_qty"] * $item["price"]; ?>
+                                <div class="row border-bottom mt-3 mb-3">
+                                    <div class="col-8 pb-3">
+                                        <strong> <?php echo $item["buy_qty"]; ?> x <?php echo $item["name"]; ?> 
+                                            (<?php echo $item["price"]; ?>)</strong><br>
+                                        <?php echo $item['details'] ?>
 
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <div class="col-3 text-end pt-4">
+                                        <span
+                                            class="mt-3"><strong><?php echo $item["buy_qty"] * $item["price"]; ?></strong></span>
+                                    </div>
                                 </div>
-                                <div class="col-1"></div>
-                                <div class="col-3 text-end pt-4">
-                                    <span
-                                        class="mt-3"><strong><?php echo htmlspecialchars('$' . $item['total']) ?></strong></span>
-                                </div>
+                            <?php endforeach ?>
+                            <div class="col text-end">
+                                <strong>Total: <?php echo htmlspecialchars('$' . $grand_total); ?></strong>
                             </div>
-                        <?php endforeach ?>
-                        <div class="col text-end">
-                            <strong>Total: <?php echo htmlspecialchars('$' . $grandtotal); ?></strong>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
 </body>
