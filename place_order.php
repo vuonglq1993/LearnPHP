@@ -50,6 +50,15 @@ if ($order_id != null) {
              VALUES($order_id,$product_id, $buy_qty,$price)";
     insert($sql);
   }
+  if($payment_method=="PAYPAL"){
+    //Thông tin tài khoản paypal
+    $client_id = "Ade-ROOFuZXt4h51S7fEmk24cCBuQaA7CG3IxcN-y70fcWFHZTwNB9eHDqNm47VG_mZxlhvFLQ7s7Wrt";
+    $client_secret = "Ade-ROOFuZXt4h51S7fEmk24cCBuQaA7CG3IxcN-y70fcWFHZTwNB9eHDqNm47VG_mZxlhvFLQ7s7Wrt";
+
+    //url nhận kết quả
+    $success_url = "http://localhost:8888/success_paypal.php?order_id=$order_id" ;
+    $fail_url = "http://localhost:8888/fail_paypal.php?order_id=$order_id";
+  }
   header("Location: /thankyou.php");
   die();
 }
