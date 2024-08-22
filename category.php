@@ -4,7 +4,7 @@
         $id = $_GET["id"];
     // 2. connect db
     $sql = "select * from products where category_id=$id";
-    $products = select($sql);
+    $products = select($sql); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
