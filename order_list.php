@@ -25,6 +25,8 @@ $order = select($sql);
                     <th scope="col">Shipping Address</th>
                     <th scope="col">Payment Method</th>
                     <th scope="col">Total</th>
+                    <th scope="col">Detail</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -38,6 +40,7 @@ $order = select($sql);
                         <td><?php echo $item["shipping_address"] ?></td>
                         <td><?php echo $item["payment_method"] ?></td>
                         <td><?php echo $item["grand_total"] ?></td>
+                        <td><a href="order_details.php?order_id=<?php echo $item["id"]?>">Detail</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

@@ -41,6 +41,21 @@ function insert($sql){
     return null;
 }
 
+function selects($sql, $params = []) {
+    $conn = connect();
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param(str_repeat("s", count($params)), ...$params);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    //convert data to array
+    $data = [];
+    while($row = $result->fetch_assoc()){
+        $data[] = $row;
+    }
+    return $data;
+}
+
 function clearcart(){
     unset($_SESSION['cart']); 
 }
+
