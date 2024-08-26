@@ -20,15 +20,14 @@ p.product_id = oi.product_id
 $order_details = select($sql);
 foreach ($order_details as $item) {
     $items[] = [
-        "order_id" => $orderId,  // đưa order_id vào mảng để dùng để lưu vào file PDF khi xuất ra file PDF đơn hàng
+        "order_id" => $orderId,  
         "product_id" => $item["product_id"],
         "product_name" => $item["name"],
         "price" => $item["price"],
         "description" => $item["description"],
-        // "in_stock" => $item["qty"] > $cart[$item["id"]] ? true : false,
         "buy_qty" => $item["buy_qty"],
         "details" => $item["description"],
-        "total_price" => $item["price"] * $item["buy_qty"],  // tính t��ng tiền của sản phẩm đó trong đơn hàng
+        "total_price" => $item["price"] * $item["buy_qty"],  
         "shipping_address" => $item["shipping_address"],
         "created_date" => $item["created_date"],
     ];
